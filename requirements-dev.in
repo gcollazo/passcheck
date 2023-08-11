@@ -1,0 +1,8 @@
+-c requirements.txt
+black
+flake8
+isort
+tblib
+djlint
+coverage
+pip-audit
