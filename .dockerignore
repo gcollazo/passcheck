@@ -1,9 +1,0 @@
-.venv
-.env
-.git
-.gitignore
-.dockerignore
-Dockerfile
-__pycache__/
-*.py[cod]
-*$py.class
