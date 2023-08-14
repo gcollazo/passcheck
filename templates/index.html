@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Passcheck</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-</head>
+{% block content %}
+<hgroup>
+  <h1><a href="/" style="color:black">Passcheck</a></h1>
+  <p>This is a demo app that will help you check if a password is within the most commonly used passwords</p>
+</hgroup>
 
-<body>
-  <main class="container">
-    <hgroup>
-      <h1><a href="/" style="color:black">Passcheck</a></h1>
-      <p>This is a demo app that will help you check if a password is within the most commonly used passwords</p>
-    </hgroup>
-
-    <form action="/check">
-      <label for="password">
-        Enter your password to check
-        <input type="password" id="password" name="password" placeholder="Your password" required autofocus
-          autocomplete="off">
-      </label>
-      <button type="submit" class="contrast">Check Password</button>
-    </form>
-  </main>
-</body>
-
-</html>
+<form action="/check">
+  <label for="password">
+    Enter your password to check
+    <input type="password" id="password" name="password" placeholder="Your password" required autofocus
+      autocomplete="off">
+  </label>
+  <button type="submit" class="contrast">Check Password</button>
+</form>
+{% endblock %}

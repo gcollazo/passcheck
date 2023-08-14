@@ -27,20 +27,8 @@ requirements-dev.txt: requirements-dev.in
 clean:
 	@rm -rf .venv
 
-cleandb:
-	@rm -rf lift.db
-
-migrations:
-	@python3 manage.py makemigrations
-	@python3 manage.py migrate
-
-locales:
-	@python3 manage.py makemessages -l es
-	@python3 manage.py compilemessages
-.PHONY: locales
-
 run:
-	@flask --app app run --host 0.0.0.0 --port 1337 --debug
+	@python -m flask --app app run --host 0.0.0.0 --port 1337 --debug
 
 black:
 	@black --check --verbose .
@@ -52,3 +40,6 @@ lint: black flake8
 
 audit:
 	@pip-audit -r requirements.txt
+
+docker:
+	@docker build -t passcheck:$(GIT_REV) -t passcheck:latest .
