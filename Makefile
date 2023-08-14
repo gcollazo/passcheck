@@ -40,7 +40,7 @@ locales:
 .PHONY: locales
 
 run:
-	@flask --app app run --host 0.0.0.0 --port 1337
+	@flask --app app run --host 0.0.0.0 --port 1337 --debug
 
 black:
 	@black --check --verbose .

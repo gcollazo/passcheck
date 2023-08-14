@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passcheck</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+</head>
+
+<body>
+  <main class="container">
+    <hgroup>
+      <h1><a href="/" style="color:black">Passcheck</a></h1>
+      <p>This is a demo app that will help you check if a password is within the most commonly used passwords</p>
+    </hgroup>
+
+    <section
+      style="text-align: center; padding:50px; border: 10px solid rgb(13, 203, 13); background-color: rgb(222, 255, 222);">
+      <hgroup>
+        <h1>🥳 Good News!</h1>
+        <p style="color: rgb(13, 203, 13)">The password that you entered was not found in the list of most commonly used
+          passwords.</p>
+      </hgroup>
+    </section>
+
+    <section
+      style="text-align: center; padding:50px; border: 10px solid rgb(203, 13, 13); background-color: rgb(255, 222, 222);">
+      <hgroup>
+        <h1>👹 Bad News!</h1>
+        <p style="color: rgb(203, 13, 13);">The password <kbd>{{ password }}</kbd> is one of the most commonly used
+          passwords. You must change it
+          now.</p>
+      </hgroup>
+    </section>
+  </main>
+</body>
+
+</html>
