@@ -27,6 +27,9 @@ requirements-dev.txt: requirements-dev.in
 clean:
 	@rm -rf .venv
 
+initdb:
+	@python initdb.py
+
 run:
 	@python -m flask --app app run --host 0.0.0.0 --port 1337 --debug
 

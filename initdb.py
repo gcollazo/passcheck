@@ -23,6 +23,7 @@ conn = psycopg2.connect(
 )
 
 cur = conn.cursor()
+
 cur.execute("DROP TABLE IF EXISTS passwords")
 cur.execute(
     "CREATE TABLE IF NOT EXISTS passwords (id serial PRIMARY KEY,"
