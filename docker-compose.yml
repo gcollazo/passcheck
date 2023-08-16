@@ -17,7 +17,7 @@ services:
                 ]
             interval: 1s
             timeout: 1s
-            retries: 100
+            retries: 10
 
     app:
         build: .
