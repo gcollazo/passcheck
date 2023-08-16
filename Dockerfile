@@ -14,4 +14,4 @@ COPY . .
 
 EXPOSE 1337
 
-CMD ["python", "-m", "flask", "--app", "app", "run", "--host", "0.0.0.0", "--port", "1337"]
+CMD ["python", "-m", "gunicorn", "-w", "4", "app:app", "-b", "0.0.0.0:1337"]
