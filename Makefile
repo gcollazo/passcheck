@@ -46,3 +46,6 @@ audit:
 
 docker:
 	@docker build -t passcheck:$(GIT_REV) -t passcheck:latest .
+
+dockerrun:
+	@docker run -it --rm -p 1337:1337 passcheck:latest
